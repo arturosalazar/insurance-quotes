@@ -7,24 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HealthQuoteComponent implements OnInit {
 
-  /*Values we need to collect either from user or derived from user 
+  age:number; //Must be an integer
+  zipcode: number; //To be retrieved from prev component
+  zipString: string; //Calculated from number zip - needed to request
+  state: string; //calculate from Zip
+  countryFips: string; //required, we will need to calculate
+  market: string; //Individual, SHOP (small business health option program), or Any 
+  income: number; //floating point value 
+  isParent: boolean;
+  isPregnant: boolean;
+  uses_tobacco: boolean;
+  gender //enum - Male or Female
+  utilization_level //enum Low, Medium, or High
 
-  DOB
-  aptc_eligible??
-  has_mec????
-  utilizationlevel?
-  Age <- calc from DOB
-  income? <- seems required by the api
-  isParent
-  Weight?
-  Height?
-  Gender
-  Uses Tobacco
-  Zip <- get from prev component
-  State <- derive from zip 
-  Current Year <- just calc it
-
-  */
   
 
   constructor() { }
