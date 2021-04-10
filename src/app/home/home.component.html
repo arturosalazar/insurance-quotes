@@ -1,4 +1,3 @@
-
 <header>
   <div class="container">
     <a href="#" class="logo" routerLink="/home">Insurance Quotes</a>
@@ -11,9 +10,30 @@
   </div>
 </header>
 
-
 <body>
-  <div class="healthquote">Health Quote</div>
-  <div class="Autoquote">Auto Quote</div>
-  <div class="HealthAndAutoQuote">Health and Auto</div>
+  <div class="healthquote" (click)="setHealth()">Health Quote</div>
+  <div class="Autoquote" (click)="setAuto()">Auto Quote</div>
+  <div class="HealthAndAutoQuote" (click)="setHealthAndAuto()">
+    Health and Auto
+  </div>
+
+  <form class="healthForm">
+    <input
+      class="zipcode"
+      type="number"
+      align="center"
+      placeholder="ZipCode"
+      [(ngModel)]="zipcode"
+      [ngModelOptions]="{standalone: true}"
+    />
+    <br />
+    <input
+      class="submit"
+      type="button"
+      name="button"
+      align="center"
+      value="Submit"
+      (click)="getInsuranceQuote()"
+    />
+  </form>
 </body>
