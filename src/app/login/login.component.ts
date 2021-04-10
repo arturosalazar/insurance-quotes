@@ -11,5 +11,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  submitForm(){
+    console.log("Tried to log in!")
+  }
 }
