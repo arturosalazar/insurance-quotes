@@ -1,0 +1,43 @@
+<header>
+  <div class="container">
+    <a href="#" class="logo" routerLink="/home">Insurance Quotes</a>
+    <nav>
+      <ul>
+        <li><a href="#" routerLink="/home">Quotes</a></li>
+        <li><a href="#" routerLink="/settings">Settings</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<body>
+  <form class="healthForm">
+    <input
+      class="zipcode"
+      type="number"
+      align="center"
+      placeholder="ZipCode"
+      (change) = "zipModified()"
+      [(ngModel)]="zipcode"
+      [ngModelOptions]="{standalone: true}"
+    />
+    <input
+      class="zipcode"
+      type="number"
+      align="center"
+      placeholder="ZipCode"
+      (change) = "zipModified()"
+      [(ngModel)]="zipcode"
+      [ngModelOptions]="{standalone: true}"
+    />
+    <br />
+    <input
+      class="submit"
+      type="button"
+      name="button"
+      align="center"
+      value="Submit"
+      (click)="getInsuranceQuote()"
+    />
+  </form>
+</body>
