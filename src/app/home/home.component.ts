@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpService } from "../http.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -11,9 +12,8 @@ export class HomeComponent implements OnInit {
   zipcode: number = 0;
   noQuoteErrorText: string = "";
   wrongZipError: string = "";
-  zipResults: Object;
 
-  constructor(private _http: HttpService) {}
+  constructor(private route: Router) {}
 
   ngOnInit() {}
 
@@ -44,9 +44,7 @@ export class HomeComponent implements OnInit {
     this.wrongZipError = "";
 
     if (this.insuranceType != "" && this.validateZip(this.zipcode) != false) {
-      console.log("zip : " + this.zipcode + " path: " + this.insuranceType);
-      this.zipResults = this._http.getZip(this.zipcode);
-      console.log(this.zipResults);
+      this.route.navigate(["/" + this.insuranceType]);
     } else {
       if (this.insuranceType == "") {
         this.noQuoteErrorText = "*Select Insurance Type";
