@@ -3,7 +3,7 @@
     <a href="#" class="logo" routerLink="/home">Insurance Quotes</a>
     <nav>
       <ul>
-        <li><a href="#" routerLink="/">Quotes</a></li>
+        <li><a href="#" routerLink="/home">Quotes</a></li>
         <li><a href="#" routerLink="/settings">Settings</a></li>
       </ul>
     </nav>
@@ -11,11 +11,13 @@
 </header>
 
 <body>
-  <div class="healthquote" (click)="setHealth()">Health Quote</div>
-  <div class="Autoquote" (click)="setAuto()">Auto Quote</div>
-  <div class="HealthAndAutoQuote" (click)="setHealthAndAuto()">
-    Health and Auto
+  <div class="healthQuote" (click)="setHealth()">Health Quote</div>
+  <div class="autoQuote" (click)="setAuto()">Auto Quote</div>
+  <div class="healthAndAutoQuote" (click)="setHealthAndAuto()">
+    Health and Auto Quote
   </div>
+  <br>
+  <div class="selection">You have selected: {{insuranceType}}</div>
 
   <form class="healthForm">
     <input
