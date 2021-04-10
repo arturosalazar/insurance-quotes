@@ -16,9 +16,12 @@
   <div class="healthAndAutoQuote" (click)="setHealthAndAuto()">
     Health and Auto Quote
   </div>
+  <div class="textError1 err">{{noQuoteErrorText}}</div>
+
   <br>
   <div class="selection">You have selected: {{insuranceType}}</div>
   <p> Enter your zip code below. </p>
+  <div class="textError2 err">{{wrongZipError}}</div>
 
   <form class="healthForm">
     <input
@@ -26,6 +29,7 @@
       type="number"
       align="center"
       placeholder="ZipCode"
+      (change) = "zipModified()"
       [(ngModel)]="zipcode"
       [ngModelOptions]="{standalone: true}"
     />

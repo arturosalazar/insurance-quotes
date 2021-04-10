@@ -40,3 +40,8 @@ nav ul li a:hover {
 h1 {
   margin-top: 2em;
 }
+
+.err{
+  color: red;
+  font-size: 13px;
+}
