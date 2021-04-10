@@ -7,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   insuranceType: string = "";
-  zipcode: number;
+  zipcode: number = 0;
 
   constructor() {}
 
@@ -26,6 +26,20 @@ export class HomeComponent implements OnInit {
   }
 
   getInsuranceQuote() {
+    if (this.insuranceType == "") {
+      alert("Select Insurance Type");
+    }
+
+    let result = this.validateZip(this.zipcode);
+
+    if (result == false) {
+      alert("Enter a valid zip code");
+    }
+
     console.log("zip : " + this.zipcode + " path: " + this.insuranceType);
+  }
+
+  validateZip(zipcode: number): boolean {
+    return zipcode.toString().length == 5;
   }
 }
