@@ -1,5 +1,5 @@
 header {
-  background: #6f00ff;
+  background: linear-gradient(to right, #9c27b0, #e040fb);
   padding: 1em 0;
 }
 
@@ -34,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #5900cc;
+  background: #9c27b0;
 }
 
 h1 {
