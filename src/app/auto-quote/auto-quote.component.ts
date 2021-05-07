@@ -17,7 +17,7 @@ export class AutoQuoteComponent implements OnInit {
   vin: string;
   miles: number; // yearly miles
   gender; //enum - Male or Female
-  safety: // passive restraint system, anti-lock brakes, airbags
+  safety; // passive restraint system, anti-lock brakes, airbags
   infractions: boolean; // do they have infractions on their driving record
   utilization_level; //enum Low, Medium, or High
 

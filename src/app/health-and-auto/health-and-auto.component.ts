@@ -26,7 +26,7 @@ export class HealthAndAutoComponent implements OnInit {
   year: number; // car year
   vin: string;
   miles: number; // yearly miles
-  safety: // passive restraint system, anti-lock brakes, airbags
+  safety; // passive restraint system, anti-lock brakes, airbags
   infractions: boolean; // do they have infractions on their driving record
   auto_utilization; //enum Low, Medium, or High
 
