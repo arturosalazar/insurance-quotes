@@ -26,12 +26,15 @@
   <form class="healthForm">
     <input
       class="zipcode"
-      type="number"
-      align="center"
-      placeholder="ZipCode"
-      (change) = "zipModified()"
-      [(ngModel)]="zipcode"
-      [ngModelOptions]="{standalone: true}"
+        type="number"
+        align="center"
+        placeholder="ZipCode"
+        (change) = "zipModified()"
+        (keyup.enter) = "zipModified()"
+        (keyup.enter)="getInsuranceQuote()"
+        (blur) = "zipModified()"
+        [(ngModel)]="zipcode"
+        [ngModelOptions]="{standalone: true}"
     />
     <br />
     <input
